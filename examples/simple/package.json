@@ -1,0 +1,18 @@
+{
+  "name": "jest-runner-phpunit-example-simple",
+  "version": "0.0.1",
+  "description": "A simple example of jest-runner-phpunit",
+  "main": "index.js",
+  "author": "Mattias Lyckne <mattias@lyckne.se>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "jest": "^23.1.0"
+  },
+  "jest": {
+    "runner": "jest-runner-phpunit",
+    "displayName": "phpunit",
+    "moduleFileExtensions": ["php"],
+    "testMatch": ["<rootDir>/tests/**/*Test.php"]
+  }
+}
