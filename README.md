@@ -24,7 +24,7 @@ In your `package.json`
     "runner": "jest-runner-phpunit",
     "displayName": "phpunit",
     "moduleFileExtensions": ["php"],
-    "testMatch": ["<rootDir>/tests/**/*Test.php"],
+    "testMatch": ["<rootDir>/tests/**/*Test.php"]
   }
 }
 ```
@@ -56,7 +56,7 @@ module.exports = {
 
 // jest-phpunit.config.js
 module.exports = {
-  // your jest-runner-eslint options
+  // your jest-runner-phpunit options
   runner: 'jest-runner-phpunit',
   displayName: "phpunit",
   moduleFileExtensions: ["php"],
@@ -71,7 +71,7 @@ In your `package.json`:
   "jest": {
     "projects": [
       "<rootDir>/jest-test.config.js",
-      "<rootDir>/jest-eslint.config.js"
+      "<rootDir>/jest-phpunit.config.js"
     ]
   }
 }
@@ -83,7 +83,7 @@ Or in `jest.config.js`:
 module.exports = {
   projects: [
     '<rootDir>/jest-test.config.js',
-    '<rootDir>/jest-eslint.config.js'
+    '<rootDir>/jest-phpunit.config.js'
   ]
 }
 ```
@@ -101,7 +101,7 @@ If you are using Jest >=22.0.5, you can supply an array of project configuration
         "runner": "jest-runner-phpunit",
         "displayName": "phpunit",
         "moduleFileExtensions": ["php"],
-        "testMatch": ["<rootDir>/tests/**/*Test.php"],
+        "testMatch": ["<rootDir>/tests/**/*Test.php"]
       }
     ]
   }
@@ -120,7 +120,7 @@ module.exports = {
       runner: 'jest-runner-phpunit',
       displayName: "phpunit",
       moduleFileExtensions: ["php"],
-      testMatch: ['<rootDir>/test/**/*Test.php']
+      testMatch: ['<rootDir>/tests/**/*Test.php']
     }
   ]
 }
