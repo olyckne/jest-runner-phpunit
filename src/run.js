@@ -1,14 +1,16 @@
 import Worker from 'jest-worker';
 import { jestError, jestResult } from './jest-result';
 
-const generateUniqueFilename = (testPath) => {
+const generateUniqueFilename = (cacheDirectory, testPath) => {
   const file = testPath.replace(/\//gi, '-');
-  return `jest-runner-phpunit-${file}.xml`;
+  return `${cacheDirectory}/jest-runner-phpunit-${file}.xml`;
 };
 
-const phpunit = async ({ testPath }) => {
+const phpunit = async ({ config, testPath }) => {
   let result = {};
-  const outputFile = generateUniqueFilename(testPath);
+
+  const outputFile = generateUniqueFilename(config.cacheDirectory, testPath);
+
   const worker = new Worker(require.resolve('./phpunit'));
 
   const start = +new Date();
