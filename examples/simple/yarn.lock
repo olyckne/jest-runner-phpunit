@@ -565,6 +565,13 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
+create-jest-runner@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/create-jest-runner/-/create-jest-runner-0.4.0.tgz#7a9419e9410484aec5048691c19745a4285baf45"
+  dependencies:
+    jest-worker "^22.0.0"
+    throat "^4.1.0"
+
 cross-spawn@^5.0.1:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -1627,6 +1634,14 @@ jest-resolve@^23.1.0:
     chalk "^2.0.1"
     realpath-native "^1.0.0"
 
+jest-runner-phpunit@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/jest-runner-phpunit/-/jest-runner-phpunit-0.0.2.tgz#3bb7ae36ab1d9ea03d0eeab713997a4a42fe0b6e"
+  dependencies:
+    create-jest-runner "^0.4.0"
+    jest-worker "^23.0.1"
+    xml2js "^0.4.19"
+
 jest-runner@^23.1.0:
   version "23.1.0"
   resolved "https://registry.yarnpkg.com/jest-runner/-/jest-runner-23.1.0.tgz#fa20a933fff731a5432b3561e7f6426594fa29b5"
@@ -1715,6 +1730,12 @@ jest-watcher@^23.1.0:
     ansi-escapes "^3.0.0"
     chalk "^2.0.1"
     string-length "^2.0.0"
+
+jest-worker@^22.0.0:
+  version "22.4.3"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-22.4.3.tgz#5c421417cba1c0abf64bf56bd5fb7968d79dd40b"
+  dependencies:
+    merge-stream "^1.0.1"
 
 jest-worker@^23.0.1:
   version "23.0.1"
@@ -2582,7 +2603,7 @@ sane@^2.0.0:
   optionalDependencies:
     fsevents "^1.2.3"
 
-sax@^1.2.4:
+sax@>=0.6.0, sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
@@ -2864,7 +2885,7 @@ test-exclude@^4.2.1:
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
 
-throat@^4.0.0:
+throat@^4.0.0, throat@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
 
@@ -3108,6 +3129,17 @@ ws@^4.0.0:
 xml-name-validator@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
+
+xml2js@^0.4.19:
+  version "0.4.19"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.19.tgz#686c20f213209e94abf0d1bcf1efaa291c7827a7"
+  dependencies:
+    sax ">=0.6.0"
+    xmlbuilder "~9.0.1"
+
+xmlbuilder@~9.0.1:
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-9.0.7.tgz#132ee63d2ec5565c557e20f4c22df9aca686b10d"
 
 y18n@^3.2.1:
   version "3.2.1"
