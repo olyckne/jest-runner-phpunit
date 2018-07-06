@@ -11,6 +11,9 @@
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:watch:coverage": "jest --watch --coverage",
     "watch": "yarn build -w",
     "build": "babel src --ignore tests,examples -d build",
     "prepublish": "yarn build"
@@ -33,6 +36,15 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-prettier": "^2.6.0",
     "jest": "^23.3.0",
+    "jest-junit": "^5.1.0",
     "prettier": "^1.13.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageDirectory": "<rootDir>/coverage",
+    "coverageReporters": ["json", "lcov", "text", "text-summary", "html"],
+    "reporters": ["jest-junit"]
   }
 }

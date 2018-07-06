@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="ExampleTest" file="/Users/mattias.lyckne/Code/Olyckne/jest-runner-phpunit/examples/simple/tests/ExampleTest.php" tests="2" assertions="2" errors="0" failures="1" skipped="0" time="0.011374">
+    <testcase name="testItWorks" class="ExampleTest" classname="ExampleTest" file="/Users/mattias.lyckne/Code/Olyckne/jest-runner-phpunit/examples/simple/tests/ExampleTest.php" line="7" assertions="1" time="0.006634"/>
+    <testcase name="testItFails" class="ExampleTest" classname="ExampleTest" file="/Users/mattias.lyckne/Code/Olyckne/jest-runner-phpunit/examples/simple/tests/ExampleTest.php" line="11" assertions="1" time="0.004740">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">ExampleTest::testItFails
+Failed asserting that false is true.
+
+/Users/mattias.lyckne/Code/Olyckne/jest-runner-phpunit/examples/simple/tests/ExampleTest.php:12
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

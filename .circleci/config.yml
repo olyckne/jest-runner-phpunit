@@ -36,14 +36,30 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/repo
-      - run: yarn lint
+      - run:
+          name: Eslint
+          command: yarn lint --format junit -o reports/eslint/js-lint-results.xml
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: reports
   test:
     <<: *defaults
     steps:
       - checkout
       - attach_workspace:
           at: ~/repo
-      - run: yarn test
+      - run:
+          name: Jest
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/jest/js-test-results.xml"
+          command: yarn test:coverage --ci
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: reports
+          path: coverage
+
   publish:
     <<: *defaults
     steps:

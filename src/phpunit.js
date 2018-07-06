@@ -27,7 +27,7 @@ const parse = (result) => {
       fullName: `${testcase.$.class}::${testcase.$.name}`,
       failureMessages: testcase.failure ? testcase.failure.map(failure => failure._) : [],
       status: testcase.failure ? 'failed' : 'passed',
-      numPassingAsserts: testcase.$.assertions,
+      numPassingAsserts: parseInt(testcase.$.assertions, 0),
     })),
   };
 };
