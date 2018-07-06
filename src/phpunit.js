@@ -3,7 +3,7 @@ import fs from 'fs';
 import { parseString } from 'xml2js';
 
 const run = (testPath, outputFile) => new Promise((resolve, reject) => {
-  exec(`phpunit --no-coverage --log-junit=${outputFile} ${testPath}`, (error) => {
+  exec(`./vendor/bin/phpunit --no-coverage --log-junit=${outputFile} ${testPath}`, (error) => {
     if (error && error.signal) {
       return reject(error);
     }

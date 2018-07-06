@@ -5,12 +5,15 @@
 Install `jest`_(it needs Jest 21+)_ and `jest-runner-phpunit`
 
 ```bash
+# jest-runner-phpunit assumes phpunit is installed with composer
+composer require --dev phpunit/phpunit
+
+# Install with yarn
 yarn add --dev jest jest-runner-phpunit
 
 # or with NPM
 
 npm install --save-dev jest jest-runner-phpunit
-
 ```
 
 ### Add it to your Jest config
