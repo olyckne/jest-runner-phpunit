@@ -1,4 +1,7 @@
 {
   "extends": ["eslint-config-airbnb-base"],
-  "plugins": ["prettier"]
+  "plugins": ["prettier"],
+  "env": {
+    "jest": true
+  }
 }
