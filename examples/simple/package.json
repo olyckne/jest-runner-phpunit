@@ -8,7 +8,7 @@
   "private": true,
   "devDependencies": {
     "jest": "^23.1.0",
-    "jest-runner-phpunit": "^0.0.2"
+    "jest-runner-phpunit": "^0.0.5"
   },
   "jest": {
     "runner": "jest-runner-phpunit",
