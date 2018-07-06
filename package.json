@@ -1,6 +1,6 @@
 {
   "name": "jest-runner-phpunit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A phpunit runner for Jest",
   "main": "build/index.js",
   "files": [
