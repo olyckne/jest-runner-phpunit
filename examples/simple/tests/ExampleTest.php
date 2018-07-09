@@ -1,14 +1,19 @@
 <?php
 
+namespace Olyckne;
+
 use PHPUnit\Framework\TestCase;
 
-class ExampleTest extends TestCase {
+class ExampleTest extends TestCase
+{
 
-    public function testItWorks() {
+    public function testItWorks()
+    {
         $this->assertTrue(true);
     }
 
-    public function testItFails() {
+    public function testItFails()
+    {
         $this->assertTrue(false);
     }
 }
