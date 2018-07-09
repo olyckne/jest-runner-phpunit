@@ -10,6 +10,8 @@ defaults: &defaults
   docker:
     # specify the version you desire here
     - image: circleci/node:8
+  environment:
+    CC_TEST_REPORTER_ID: a9ab1a49ce83c61a51c08a1d737297decf5c39315e8361c71aa644a705e0d100
 
 jobs:
   build:
@@ -50,10 +52,20 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
           name: Jest
           environment:
             JEST_JUNIT_OUTPUT: "reports/jest/js-test-results.xml"
-          command: yarn test:coverage --ci
+          command: |
+            ./cc-test-reporter before-build
+            yarn test:coverage --ci
+            ./cc-test-reporter format-coverage ./coverage/lcov.info -t lcov
+            ./cc-test-reporter upload-coverage
+
       - store_test_results:
           path: reports
       - store_artifacts:
