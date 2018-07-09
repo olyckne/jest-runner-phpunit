@@ -3,11 +3,23 @@
   "version": "0.0.5",
   "description": "A phpunit runner for Jest",
   "main": "build/index.js",
+  "keywords": ["jest", "phpunit"],
   "files": [
     "build/"
   ],
+  "directories": {
+    "example": "examples"
+  },
   "author": "Mattias Lyckne <mattias@lyckne.se>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olyckne/jest-runner-phpunit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olyckne/jest-runner-phpunit/issues"
+  },
+  "homepage": "https://github.com/olyckne/jest-runner-phpunit#readme",
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
@@ -44,7 +56,15 @@
       "src/**/*.js"
     ],
     "coverageDirectory": "<rootDir>/coverage",
-    "coverageReporters": ["json", "lcov", "text", "text-summary", "html"],
-    "reporters": ["jest-junit"]
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "text-summary",
+      "html"
+    ],
+    "reporters": [
+      "jest-junit"
+    ]
   }
 }
