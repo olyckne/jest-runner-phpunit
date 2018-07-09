@@ -1,3 +1,7 @@
+[![CircleCI](https://circleci.com/gh/olyckne/jest-runner-phpunit.svg?style=svg)](https://circleci.com/gh/olyckne/jest-runner-phpunit)
+[![npm version](https://badge.fury.io/js/jest-runner-phpunit.svg)](https://badge.fury.io/js/jest-runner-phpunit)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b0e6ec1784ea1ab99e9f/maintainability)](https://codeclimate.com/github/olyckne/jest-runner-phpunit/maintainability)
+<a href="https://codeclimate.com/github/olyckne/jest-runner-phpunit/test_coverage"><img src="https://api.codeclimate.com/v1/badges/b0e6ec1784ea1ab99e9f/test_coverage" /></a>
 ## Usage
 
 ### Install
