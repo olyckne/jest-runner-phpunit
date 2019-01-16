@@ -20,7 +20,7 @@ const parse = (result) => {
   return {
     failures: parseInt(output.$.failures, 0),
     passes: parseInt(output.$.tests, 0) - parseInt(output.$.failures, 0),
-    tests: output.testcase.map(testcase => ({
+    tests: (output.testcase || output.testsuite[0].testcase).map(testcase => ({
       ancestorTitles: [],
       duration: parseFloat(testcase.$.time) * 1000,
       title: testcase.$.name,
