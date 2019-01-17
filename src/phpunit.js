@@ -34,8 +34,9 @@ const parse = (result) => {
     passes: parseInt(output.$.tests, 0) - parseInt(output.$.failures, 0),
     tests: [
       ...(output.testcase ? mapTestcases(output.testcase) : []),
-      ...(output.testsuite ? output.testsuite.reduce(
-        (allTests, testSuite) => [...allTests, ...mapTestcases(testSuite.testcase)], []) : []
+      ...(output.testsuite ? output.testsuite.reduce((allTests, testSuite) =>
+        [...allTests, ...mapTestcases(testSuite.testcase)], [])
+        : []
       ),
     ],
   };
