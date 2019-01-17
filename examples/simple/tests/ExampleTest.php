@@ -24,13 +24,28 @@ class ExampleTest extends TestCase
         $this->assertSame($actual, $expected);
     }
 
-    protected function exampleDataProvider()
+    public function exampleDataProvider()
     {
         return [
             [true, true],
             [false, false],
             [1, 1],
             ['example', 'example'],
+        ];
+    }
+
+    /**
+     * @dataProvider exampleSecondDataProvider
+     */
+    public function testWithAnotherDataProvider($actual, $expected)
+    {
+        $this->assertSame($actual, $expected);
+    }
+
+    public function exampleSecondDataProvider()
+    {
+        return [
+            [true, true],
         ];
     }
 }
